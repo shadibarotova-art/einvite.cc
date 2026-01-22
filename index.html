@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .page {
+            flex: 0 0 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .main-text {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .dates {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #222;
+        }
+
+        .location {
+            font-size: 18px;
+            margin: 25px 0;
+            color: #444;
+        }
+
+        .address {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .time-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-right: 20px;
+            min-width: 80px;
+        }
+
+        .event {
+            font-size: 18px;
+            color: #444;
+            text-align: left;
+        }
+
+        .signature {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .quran-verse {
+            font-size: 20px;
+            font-style: italic;
+            margin: 40px 0;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .names {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #222;
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            font-size: 16px;
+            color: #888;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .ready-badge {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .einvite-logo {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .header {
+                font-size: 24px;
+            }
+            
+            .names {
+                font-size: 28px;
+            }
+            
+            .dates {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Страница 1: Обложка -->
+    <div class="page">
+        <div class="container">
+            <div class="ready-badge">Готово</div>
+            <div class="einvite-logo">einvite.cc</div>
+            <div class="names">Tasur & Laziza</div>
+            <div class="quran-verse">«Мы создали вас парами...» (Коран, 78:8)</div>
+            <div class="scroll-hint">листайте вниз</div>
+        </div>
+    </div>
+
+    <!-- Страница 2: Основное приглашение -->
+    <div class="page">
+        <div class="container">
+            <div class="header">ДОРОГИЕ<br>РОДНЫЕ И БЛИЗКИЕ!</div>
+            <div class="main-text">
+                Приглашаем вас отпраздновать<br>
+                вместе с нами дни нашей свадьбы.
+            </div>
+            <div class="dates">
+                15/07/2026<br>
+                16/07/2026
+            </div>
+            <div class="location">
+                Нашей локацией для такого важного<br>
+                события стал – банкетный зал<br>
+                <strong>SHAHRUH</strong>
+            </div>
+            <div class="address">
+                Будем ждать вас по адресу:<br>
+                г. Истиклол
+            </div>
+        </div>
+    </div>
+
+    <!-- Страница 3: Время и подпись -->
+    <div class="page">
+        <div class="container">
+            <div class="ready-badge">Готово</div>
+            <div class="einvite-logo">einvite.cc</div>
+            <div class="timeline">
+                <div class="time-item">
+                    <div class="time">18:30</div>
+                    <div class="event">Сбор гостей</div>
+                </div>
+                <div class="time-item">
+                    <div class="time">19:00</div>
+                    <div class="event">Начало торжества</div>
+                </div>
+            </div>
+            <div class="signature">С ЛЮБОВЬЮ,<br>J & J</div>
+        </div>
+    </div>
+
+    <script>
+        // Плавная прокрутка между страницами
+        let isScrolling = false;
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+
+        function scrollToPage(pageIndex) {
+            if (pageIndex >= 0 && pageIndex < pages.length) {
+                currentPage = pageIndex;
+                window.scrollTo({
+                    top: pageIndex * window.innerHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Обработчик колеса мыши/тачпада
+        window.addEventListener('wheel', (e) => {
+            if (isScrolling) return;
+            
+            isScrolling = true;
+            
+            if (e.deltaY > 0 && currentPage < pages.length - 1) {
+                scrollToPage(currentPage + 1);
+            } else if (e.deltaY < 0 && currentPage > 0) {
+                scrollToPage(currentPage - 1);
+            }
+            
+            setTimeout(() => { isScrolling = false; }, 800);
+        });
+
+        // Обработчик свайпов на мобильных устройствах
+        let touchStartY = 0;
+
+        window.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        });
+
+        window.addEventListener('touchend', (e) => {
+            if (isScrolling) return;
+            
+            const touchEndY = e.changedTouches[0].clientY;
+            const diff = touchStartY - touchEndY;
+            
+            if (Math.abs(diff) < 50) return;
+            
+            isScrolling = true;
+            
+            if (diff > 0 && currentPage < pages.length - 1) {
+                scrollToPage(currentPage + 1);
+            } else if (diff < 0 && currentPage > 0) {
+                scrollToPage(currentPage - 1);
+            }
+            
+            setTimeout(() => { isScrolling = false; }, 800);
+        });
+
+        // Инициализация - прокрутка к первой странице
+        window.scrollTo(0, 0);
+    </script>
+</body>
+</html>
